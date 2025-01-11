@@ -21,6 +21,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: 'deplus',
       database: 'vbenbook',
+      synchronize: true,
+      autoLoadEntities: true,
     }),
   ],
   controllers: [AppController],
