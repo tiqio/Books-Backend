@@ -35,4 +35,8 @@ export class UserService {
   remove(id: number): Promise<DeleteResult> {
     return this.usersResposity.delete(id);
   }
+
+  findByUsername(username: string): Promise<User> {
+    return this.usersResposity.findOneBy({ username });
+  }
 }
